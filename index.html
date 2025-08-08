@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Color Background Changer</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <div class="container">
+                <h1>Background Color Changer</h1>
+                <p>Click any button below to change the background color!</p>
+
+                <div class="color-buttons">
+                        <button class="color-btn" data-color="#ff0000">Red</button>
+                        <button class="color-btn" data-color="#0000ff">Blue</button>
+                        <button class="color-btn" data-color="#008000">Green</button>
+                        <button class="color-btn" data-color="#ffa500">Orange</button>
+                        <button class="color-btn" data-color="#800080">Purple</button>
+                        <button class="color-btn" data-color="#008080">Teal</button>
+                </div>
+
+                <div class="special-buttons">
+                        <button id="random-btn">Random Color</button>
+                        <button id="reset-btn">Reset to White</button>
+                </div>
+
+                <div class="color-info">
+                        <p>Current Color: <span id="current-color">#ffffff</span></p>
+                </div>
+
+                
+                <input type="color" id="color-picker" value="#ffffff">
+                <button id="apply-picker">Apply Color</button>
+                
+                <div id="history">
+                        <h3>Color History</h3>
+                        <div class="swatches"></div>
+                </div>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

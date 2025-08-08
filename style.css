@@ -1,0 +1,149 @@
+/* Reset and base styles */
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+body{
+        font-family: 'Arial', sans-serif;
+        background-color: #ffffff;
+        transition: background-color 0.3s ease;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.container{
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+}
+
+h1{
+        color: #333;
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+}
+
+p{
+        color: #666;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+}
+
+/* Button Styles */
+.color-buttons{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+}
+
+.color-btn{
+        padding: 1rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.color-btn:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.special-buttons{
+        margin-bottom: 1.5rem;
+}
+
+#random-btn, #reset-btn{
+        padding: 1rem 2rem;
+        margin: 0 0.5rem;
+        border: 2px solid #333;
+        border-radius: 25px;
+        background: transparent;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+}
+
+#random-btn{
+        color: #333;
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffa726);
+        background-size: 300% 300%;
+        animation: gradientShift 3s ease infinite;
+        border: none;
+        color: white;
+}
+
+#reset-btn{
+        color: #333;
+}
+
+#random-btn:hover, #reset-btn:hover{
+        transform: scale(1.05);
+}
+
+@keyframes gradientShift {
+        0% { background-position: 0% 50%;}
+        50% { background-position: 100% 50%;}
+        100% { background-position: 0% 50%;}
+}
+
+.color-info{
+        background: rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+}
+
+#current-color{
+        font-family: 'Courier New', monospace;
+        font-weight: bold;
+        color: #333;
+        background-color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+}
+
+#history{
+        margin-top: 1.5rem; 
+}
+#history .swatches{
+        display: flex;
+        gap: 0.5rem; 
+}
+.swatch{
+  width: 30px; height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+       .color-buttons{
+                grid-template-columns: repeat(2, 1fr);
+       }
+
+       h1{
+                font-size: 2rem;
+       }
+
+       .container{
+                margin: 1rem;
+                padding: 1.5rem;
+       }
+
+}
